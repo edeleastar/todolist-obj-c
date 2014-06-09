@@ -56,7 +56,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  
+
   self.path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
   self.path = [self.path stringByAppendingPathComponent:@"TodoList.txt"];
   
@@ -69,6 +69,7 @@
   {
     self.toDoItems = [[NSKeyedUnarchiver unarchiveObjectWithFile:self.path] mutableCopy];
   }
+  [self loadInitialData];
   self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
