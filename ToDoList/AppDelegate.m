@@ -7,11 +7,6 @@
   return YES;
 }
 
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notif
-{
-    application.applicationIconBadgeNumber -= notif.applicationIconBadgeNumber;
-}
-
 - (void)applicationWillResignActive:(UIApplication *)application
 {
 }
